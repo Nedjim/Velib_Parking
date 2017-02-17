@@ -1,6 +1,7 @@
 import React from 'react';
 import Request from 'superagent';
 import _ from 'lodash';
+import Places from './Places.jsx';
 
 export default class Content extends React.Component {
 
@@ -28,12 +29,11 @@ export default class Content extends React.Component {
 
         _.map(body, e => {
             let address = e.address.split(' ');
-             if(address[address.length -2] === '93100' || address[address.length -2] === '75012'){
+             if(address[address.length -2] === '93100'){
                 places.push(e);
             }
         });
         this.setState({places: places});
-        console.log(this.state.places);
     }
     /*--------------------------------------------------- */
     updateSearch(e){
@@ -48,6 +48,7 @@ export default class Content extends React.Component {
                        onChange={this.updateSearch.bind(this)}
                        placeholder='Saisissez le code postale'
                        maxLength='5'/>
+                <Places places={this.state.places}/>
             </div>
         )
     }
