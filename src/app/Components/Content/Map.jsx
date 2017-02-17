@@ -23,33 +23,33 @@ export default class Map extends React.Component {
         });
   }
 
-//   onDragEnd(e) {
-//     console.log('onDragEnd', e);
-//   }
+  onDragEnd(e) {
+    console.log('onDragEnd', e);
+  }
 
-//   onCloseClick() {
-//     console.log('onCloseClick');
-//   }
+  onCloseClick() {
+    console.log('onCloseClick');
+  }
 
-//   onClick(e) {
-//     console.log('onClick', e);
-//   }
+  onClick(e) {
+    console.log('onClick', e);
+  }
 
     render(){
 
         console.log(this.props);
         return (
             <Gmaps
-                height={'75vh'}
+                height={'50vh'}
                 lat={this.state.lat}
                 lng={this.state.lng}
-                zoom={12}
+                zoom={16}
                 loadingMessage={'Be happy'}
                 params={{v: '3.exp', key: 'AIzaSyBZgn4XfISYSuxKTfQZgbx5fHxetmEGfzI'}}
                 onMapCreated={this.onMapCreated}>
                 <Marker
-                    lat={coords.lat}
-                    lng={coords.lng}
+                    lat={this.state.lat}
+                    lng={this.state.lng}
                     draggable={true}
                     onDragEnd={this.onDragEnd} />
             </Gmaps>
