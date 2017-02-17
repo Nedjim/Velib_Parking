@@ -1,19 +1,24 @@
-import React from 'react';
-import _ from 'lodash';
-import CreatePlaces from './CreatePlaces.jsx';
+import React            from 'react';
+import _                from 'lodash';
+import CreatePlaces     from './CreatePlaces.jsx';
 
-
-export default class App extends React.Component {
+export default class Places extends React.Component {
 
     render() {
-        return (
-            <ul id='places'>
-                { _.map(this.props.places, (e, index) => {
-                    return (
-                        <CreatePlaces place={e} key={index}/>
-                    )
-                })}
-            </ul>
-        )
+        if(this.props.status === true) {
+            return (
+                <ul id='places'>
+                    { _.map(this.props.places, e => {
+                        return (
+                            <CreatePlaces place={e} key={e.number}/>
+                        )
+                    })}
+                </ul>
+            )
+        } else {
+            return (
+                <p>Aucun résultat ne correspond à votre recherche</p>
+            )
+        }
     }
 }

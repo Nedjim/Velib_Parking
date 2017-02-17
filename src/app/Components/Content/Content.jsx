@@ -10,7 +10,6 @@ export default class Content extends React.Component {
         this.state = {
             status: false,
             places: null
-          // search: ''
         }
         this.getData();
     }
@@ -19,36 +18,40 @@ export default class Content extends React.Component {
     getData(){
         let url = 'https://api.jcdecaux.com/vls/v1/stations?contract=Paris&available_bike_stands&apiKey=5a660b1f59583e8962c4ef34cedbc0bf283e7bd0'
         Request.get(url).then(data => {
-            this.setState({status: true});
-            this.getVelibPlaces(data.body);
+            this.setState({
+                body: data.body
+            });
         });
     }
+     /*--------------------------------------------------- */
+    onSubmit(e){
+        e.preventDefault();
+        this.getVelibPlaces(this.refs.zip.value);
+    }
     /*---------------------------------------------------*/
-    getVelibPlaces(body){
+    getVelibPlaces(zip){
         let places = []
 
-        _.map(body, e => {
+        _.map(this.state.body, e => {
             let address = e.address.split(' ');
-             if(address[address.length -2] === '93100'){
+             if(address[address.length -2] === zip){
                 places.push(e);
             }
         });
-        this.setState({places: places});
+        return places.length == 0 ? this.setState({status: false}) : this.setState({places: places, status: true});
     }
-    /*--------------------------------------------------- */
-    updateSearch(e){
-        this.setState({search: e.target.value});
-    }
+
      /*---------------------------------------------------*/
     render() {
         return (
             <div>
-                <input type='text'
-                       value={this.state.search}
-                       onChange={this.updateSearch.bind(this)}
-                       placeholder='Saisissez le code postale'
-                       maxLength='5'/>
-                <Places places={this.state.places}/>
+                <form onSubmit={this.onSubmit.bind(this)}>
+                    <input type='text'
+                           required ref='zip'
+                           placeholder='Code postale'/>
+                    <button type='submit'>Envoyer</button>
+                </form>
+                <Places places={this.state.places} status={this.state.status}/>
             </div>
         )
     }

@@ -1,5 +1,5 @@
-import React from 'react';
-import Map from './Map.jsx';
+import React        from 'react';
+import Map          from './Map.jsx';
 
 export default class Modal extends React.Component {
 

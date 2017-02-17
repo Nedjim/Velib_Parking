@@ -1,7 +1,7 @@
-import React from 'react';
-import Modal from './Modal.jsx';
+import React        from 'react';
+import Modal        from './Modal.jsx';
 
-export default class App extends React.Component {
+export default class CreatePlaces extends React.Component {
 
      constructor() {
         super();
