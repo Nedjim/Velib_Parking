@@ -6,29 +6,48 @@ export default class Content extends React.Component {
 
     constructor(){
         super();
-        this.state = {};
-        this.getDataVelib();
-        //this.getPlaces();
+        this.state = {
+            status: false,
+            places: null
+          // search: ''
+        }
+        this.getData();
     }
-    getDataVelib(){
+
+     /*---------------------------------------------------*/
+    getData(){
         let url = 'https://api.jcdecaux.com/vls/v1/stations?contract=Paris&available_bike_stands&apiKey=5a660b1f59583e8962c4ef34cedbc0bf283e7bd0'
-
         Request.get(url).then(data => {
-            this.setState({ data: data.body});
-        })
+            this.setState({status: true});
+            this.getVelibPlaces(data.body);
+        });
     }
+    /*---------------------------------------------------*/
+    getVelibPlaces(body){
+        let places = []
 
-    render() {
-         let data = this.state.data;
-        _.map(data, e => {
+        _.map(body, e => {
             let address = e.address.split(' ');
              if(address[address.length -2] === '93100' || address[address.length -2] === '75012'){
-                console.log(e);
+                places.push(e);
             }
         });
+        this.setState({places: places});
+        console.log(this.state.places);
+    }
+    /*--------------------------------------------------- */
+    updateSearch(e){
+        this.setState({search: e.target.value});
+    }
+     /*---------------------------------------------------*/
+    render() {
         return (
             <div>
-                hooh
+                <input type='text'
+                       value={this.state.search}
+                       onChange={this.updateSearch.bind(this)}
+                       placeholder='Saisissez le code postale'
+                       maxLength='5'/>
             </div>
         )
     }
