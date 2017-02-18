@@ -2,7 +2,7 @@ import React            from 'react';
 import _                from 'lodash';
 import CreatePlaces     from './CreatePlaces.jsx';
 
-export default class Places extends React.Component {
+export default class Velib extends React.Component {
 
     render() {
         if(this.props.status === true) {

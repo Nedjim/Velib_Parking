@@ -1,7 +1,7 @@
-import React from 'react';
-import Request from 'superagent';
-import _ from 'lodash';
-import Places from './Places.jsx';
+import React            from 'react';
+import Request          from 'superagent';
+import _                from 'lodash';
+import Velib            from './Velib.jsx';
 
 export default class Content extends React.Component {
 
@@ -51,7 +51,7 @@ export default class Content extends React.Component {
                            placeholder='Code postale'/>
                     <button type='submit'>Envoyer</button>
                 </form>
-                <Places places={this.state.places} status={this.state.status}/>
+                <Velib places={this.state.places} status={this.state.status}/>
             </div>
         )
     }
