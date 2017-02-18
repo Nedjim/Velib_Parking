@@ -1,6 +1,5 @@
 import React            from 'react';
-import { Router, Route, Link, IndexRoute, hashHistory, browserHistory } from 'react-router'
-import Header           from './Header/Header.jsx';
+import { Router, Route, Link, IndexRoute, hashHistory, browserHistory } from 'react-router';
 import Velib            from './Content/Velib/Content.jsx';
 import Parking          from './Content/Parking/Content.jsx';
 

@@ -2,6 +2,7 @@ import React            from 'react';
 import Request          from 'superagent';
 import _                from 'lodash';
 import Parking          from './Parking.jsx';
+import Header           from './../../Header/Header.jsx';
 
 export default class Content extends React.Component {
 
@@ -43,12 +44,15 @@ export default class Content extends React.Component {
     render() {
             return (
                 <div>
-                    <form onSubmit={this.onSubmit.bind(this)}>
-                        <input type='text'
-                            required ref='arrond'
-                            placeholder='arrondissement'/>
-                        <button type='submit'>Envoyer</button>
-                    </form>
+                    <Header title={'Parkings gratuit'}/>
+                    <div className='formulaire'>
+                        <form onSubmit={this.onSubmit.bind(this)}>
+                            <input type='text'
+                                required ref='arrond'
+                                placeholder='arrondissement'/>
+                            <button type='submit'>Envoyer</button>
+                        </form>
+                    </div>
                     <Parking status={this.state.status} places={this.state.places}/>
                 </div>
             )

@@ -2,6 +2,7 @@ import React            from 'react';
 import Request          from 'superagent';
 import _                from 'lodash';
 import Velib            from './Velib.jsx';
+import Header           from './../../Header/Header.jsx';
 
 export default class Content extends React.Component {
 
@@ -45,12 +46,15 @@ export default class Content extends React.Component {
     render() {
         return (
             <div>
-                <form onSubmit={this.onSubmit.bind(this)}>
-                    <input type='text'
-                           required ref='zip'
-                           placeholder='Code postale'/>
-                    <button type='submit'>Envoyer</button>
-                </form>
+                <Header title={'Velib'}/>
+                <div className='formulaire'>
+                    <form onSubmit={this.onSubmit.bind(this)}>
+                        <input type='text'
+                            required ref='zip'
+                            placeholder='Code postale'/>
+                        <button type='submit'>Envoyer</button>
+                    </form>
+                </div>
                 <Velib places={this.state.places} status={this.state.status}/>
             </div>
         )
