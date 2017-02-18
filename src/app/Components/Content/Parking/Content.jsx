@@ -27,6 +27,10 @@ export default class Content extends React.Component {
     /*--------------------------------------------------- */
     onSubmit(e){
         e.preventDefault();
+        // if(Number(this.refs.arrond.value) < 10){
+        //     let concat = '0' + this.refs.arrond.value;
+        //     this.getParkingPlaces(Number(concat));
+        // }
         this.getParkingPlaces(this.refs.arrond.value);
     }
     /*--------------------------------------------------- */
@@ -49,8 +53,9 @@ export default class Content extends React.Component {
                         <form onSubmit={this.onSubmit.bind(this)}>
                             <input type='text'
                                 required ref='arrond'
-                                placeholder='arrondissement'/>
-                            <button type='submit'>Envoyer</button>
+                                placeholder='Arrondissement'
+                                maxLength='2'/>
+                            <button type='submit'>Chercher</button>
                         </form>
                     </div>
                     <Parking status={this.state.status} places={this.state.places}/>

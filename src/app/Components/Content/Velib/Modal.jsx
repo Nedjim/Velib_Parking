@@ -45,7 +45,7 @@ export default class Modal extends React.Component {
         }
         else {
             return (
-                <p>Choisissez une station ci-contre</p>
+                <p>Cliquez pour en savoir plus</p>
             )
         }
     }

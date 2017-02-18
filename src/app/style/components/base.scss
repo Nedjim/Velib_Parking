@@ -1,7 +1,9 @@
 html {
     font-size: 16px;
+    min-width: 370px;
 }
 
-input {
+input,
+button {
     border: none;
 }

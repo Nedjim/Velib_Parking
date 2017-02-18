@@ -6,7 +6,33 @@ body {
     }
     .formulaire {
         width: 50%;
-        margin: 0 auto;
+        margin-top: 2rem;
         text-align: center;
+        input,
+        button {
+            height: 5vh;
+            text-align: center;
+            margin: 1rem;
+        }
+        button {
+            width: 6rem;
+            @include radius(1rem);
+        }
+        button:hover {
+            cursor: pointer;
+        }
+    }
+    .places,
+    .resultNull,
+    .formulaire {
+        margin-top: 2rem;
+        width: 80%;
+        margin: 0 auto;
+    }
+    .resultNull {
+        text-align: center;
+    }
+    .list {
+        margin-bottom: 1rem;
     }
 }

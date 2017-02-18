@@ -14,10 +14,10 @@ export default class CreateParking extends React.Component {
 
     render() {
         return (
-                <div>
-                    <li onClick={this.openModal.bind(this)} >{this.props.place.fields.nomvoie}</li>
-                    <Modal isOpen={this.state.isModalOpen} place={this.props.place} closeModal={this.openModal}/>
-                </div>
+            <div onClick={this.openModal.bind(this)} className='list'>
+                <li>{this.props.place.fields.nomvoie}</li>
+                <Modal isOpen={this.state.isModalOpen} place={this.props.place} closeModal={this.openModal}/>
+            </div>
         )
     }
 }

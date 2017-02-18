@@ -7,7 +7,7 @@ export default class Parking extends React.Component {
     render() {
         if(this.props.status === true) {
             return (
-                <ul id='places'>
+                <ul className='places'>
                     { _.map(this.props.places, e => {
                        return (
                         <CreateParking place={e} key={e.recordid}/>
@@ -17,7 +17,9 @@ export default class Parking extends React.Component {
             )
         } else {
             return (
-                <p>Aucun résultat ne correspond à votre recherche</p>
+                <div className='resultNull'>
+                    <p>Aucun résultat ne correspond à votre recherche</p>
+                </div>
             )
         }
     }

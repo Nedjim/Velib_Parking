@@ -51,8 +51,9 @@ export default class Content extends React.Component {
                     <form onSubmit={this.onSubmit.bind(this)}>
                         <input type='text'
                             required ref='zip'
-                            placeholder='Code postale'/>
-                        <button type='submit'>Envoyer</button>
+                            placeholder='Code postale'
+                            maxLength='5'/>
+                        <button type='submit'>Chercher</button>
                     </form>
                 </div>
                 <Velib places={this.state.places} status={this.state.status}/>
