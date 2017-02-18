@@ -5,14 +5,14 @@ body {
         padding-top: 1.2rem;
     }
     .formulaire {
-        width: 50%;
-        margin-top: 5rem;
         text-align: center;
+        padding-bottom: 1rem;
+        margin: 0 auto;
+        width: 25rem;
+        @include radius(0.5rem);
     }
     .places,
-    .resultNull,
-    .formulaire {
-        margin-top: 2rem;
+    .resultNull {
         width: 80%;
         margin: 0 auto;
     }
@@ -20,13 +20,20 @@ body {
         margin-top: 2rem;
         text-align: center;
         width: 80%;
+        height: 65vh;
+        overflow: auto;
     }
     .resultNull {
         text-align: center;
+        margin-top: 3rem;
+        background: white;
+        width: 30rem;
+        padding: 1rem;
     }
     .list {
-        width: 25%;
-        padding: 0.8rem;
+        width: 15rem;
+        height: 5vh;
+        padding-top: 1rem;
         margin-bottom: 0.5rem;
         margin-left: 1rem;
         display: inline-block;
@@ -35,23 +42,31 @@ body {
         }
         .modal {
             position: absolute;
-            top: 5.5rem;
+            top: 5.2rem;
             left: 4rem;
             width: 90%;
-            height: 90vh;
+            height: 85vh;
             display: inline-block;
             .description {
                 .details {
-                    width: 50rem;
-                    height: 10vh;
                     text-align: left;
-                    margin: 0 auto;
+                    margin-left: 2rem;
+                }
+                .details {
+                    padding-top: 0.5rem;
+                    padding-bottom: 0.5rem;
                 }
                 .details>div {
                     display: inline-block;
-                    margin-right: 2rem;
+                    margin-right: 3rem;
                     div {
                         margin-bottom: 0.5rem;
+                    }
+                    div:first-child {
+                        text-align: center;
+                    }
+                    div:last-child {
+                        text-align: center;
                     }
                 }
                 .details>div:last-child {

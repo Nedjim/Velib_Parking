@@ -1,35 +1,58 @@
 body {
-    background: #F5F5F5;
+    //background-image: url(/home/nedjim/Dev/simplon/javascript/fevrier/16-02-17/velib_parking/src/app/img/velib.jpg);
+    background: $light;
+    font-family: $muli;
+    color: $greyDark;
     header {
-        background: #212121;
-        color: white;
+        background: $greyDark;
+        color: $light;
         h1 {
             font-size: 2rem;
             font-family: $orimo;
         }
     }
     .formulaire {
+        background: $yellow;
         input,
         button {
             font-size: 0.9rem;
         }
         button {
-            background: #212121;
-            color: white;
+            background: $greyDark;
+            color: $light;
         }
     }
     .list {
-        border: 0.1rem solid #E0E0E0;
+        background: white;
+        font-size: 0.8rem;
+        @include radius(0.4rem);
         .modal {
-            background: rgba(250, 250, 250, 0.9);
-            color: white;
+            background: rgba(250, 250, 250, 1);
+            color: $light;
             .description {
-                background: rgba(33, 33, 33, 0.8);
+                background: rgba(245, 245, 245, 0.8);
+            }
+            button {
+                font-size: 1rem;
             }
         }
     }
     .list:hover {
-        background: #424242;
-        color: white;
+        background: $greyDark;
+        color: $light;
+    }
+}
+
+.details>div {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    div:first-child {
+        color: $greyDark;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+    div:last-child {
+        font-size: 0.8rem;
+        color: $yellow;
     }
 }

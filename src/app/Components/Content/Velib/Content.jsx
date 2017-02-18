@@ -46,7 +46,7 @@ export default class Content extends React.Component {
     render() {
         return (
             <div>
-                <Header title={'Velib'}/>
+                <Header title={'VELIBS Ile de France'}/>
                 <div className='formulaire'>
                     <form onSubmit={this.onSubmit.bind(this)}>
                         <input type='text'
