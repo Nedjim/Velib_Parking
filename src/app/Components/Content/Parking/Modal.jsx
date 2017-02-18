@@ -19,24 +19,27 @@ export default class Modal extends React.Component {
     render() {
         if(this.props.isOpen === true) {
             return (
-                <div>
-                    <div>
-                        <div>Adresse </div>
-                         <div>{this.state.typevoie}{" " + this.state.nomvoie}</div>
+                <div className='modal' >
+                    <div className='description'>
+                        <div className='details'>
+                            <div>
+                                <div>Adresse </div>
+                                <div>{this.state.typevoie}{" " + this.state.nomvoie}</div>
+                            </div>
+                            <div>
+                                <div>Régime particulier</div>
+                                <div>{this.state.regpar}</div>
+                            </div>
+                            <div>
+                                <div>Type</div>
+                                <div>{this.state.type}</div>
+                            </div>
+                            <div>
+                                <div>Stationnement</div>
+                                <div>{this.state.stationnement}</div>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <div>Régime particulier</div>
-                        <div>{this.state.regpar}</div>
-                    </div>
-                    <div>
-                        <div>Type</div>
-                        <div>{this.state.type}</div>
-                    </div>
-                    <div>
-                        <div>Stationnement</div>
-                        <div>{this.state.stationnement}</div>
-                    </div>
-
                     <Map lat={this.state.lat} lng={this.state.lng}/>
 
                     <button onClick={this.props.closeModal.bind(this)}> Fermer </button>
@@ -45,7 +48,7 @@ export default class Modal extends React.Component {
         }
         else {
             return (
-                <p>Choisissez une station ci-contre</p>
+                <div></div>
             )
         }
     }

@@ -6,21 +6,8 @@ body {
     }
     .formulaire {
         width: 50%;
-        margin-top: 2rem;
+        margin-top: 5rem;
         text-align: center;
-        input,
-        button {
-            height: 5vh;
-            text-align: center;
-            margin: 1rem;
-        }
-        button {
-            width: 6rem;
-            @include radius(1rem);
-        }
-        button:hover {
-            cursor: pointer;
-        }
     }
     .places,
     .resultNull,
@@ -29,10 +16,69 @@ body {
         width: 80%;
         margin: 0 auto;
     }
+    .places {
+        margin-top: 2rem;
+        text-align: center;
+        width: 80%;
+    }
     .resultNull {
         text-align: center;
     }
     .list {
-        margin-bottom: 1rem;
+        width: 25%;
+        padding: 0.8rem;
+        margin-bottom: 0.5rem;
+        margin-left: 1rem;
+        display: inline-block;
+        li {
+            display: inline-block;
+        }
+        .modal {
+            position: absolute;
+            top: 5.5rem;
+            left: 4rem;
+            width: 90%;
+            height: 90vh;
+            display: inline-block;
+            .description {
+                .details {
+                    width: 50rem;
+                    height: 10vh;
+                    text-align: left;
+                    margin: 0 auto;
+                }
+                .details>div {
+                    display: inline-block;
+                    margin-right: 2rem;
+                    div {
+                        margin-bottom: 0.5rem;
+                    }
+                }
+                .details>div:last-child {
+                    margin-right: 0rem;
+                }
+            }
+        }
     }
+}
+
+
+/*BUTTON*/
+
+input,
+button {
+    height: 5vh;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+button {
+    width: 6rem;
+    margin-left: 1rem;
+    @include radius(0.5rem);
+}
+
+button:hover,
+.list:hover {
+    cursor: pointer;
 }

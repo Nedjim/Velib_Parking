@@ -1,5 +1,5 @@
 body {
-    background: #E0E0E0;
+    background: #F5F5F5;
     header {
         background: #212121;
         color: white;
@@ -17,5 +17,19 @@ body {
             background: #212121;
             color: white;
         }
+    }
+    .list {
+        border: 0.1rem solid #E0E0E0;
+        .modal {
+            background: rgba(250, 250, 250, 0.9);
+            color: white;
+            .description {
+                background: rgba(33, 33, 33, 0.8);
+            }
+        }
+    }
+    .list:hover {
+        background: #424242;
+        color: white;
     }
 }

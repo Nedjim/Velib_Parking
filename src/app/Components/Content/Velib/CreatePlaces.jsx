@@ -14,8 +14,8 @@ export default class CreatePlaces extends React.Component {
 
     render() {
         return (
-                <div onClick={this.openModal.bind(this)} className='list'>
-                    <li>{this.props.place.name}</li>
+                <div className='list'>
+                    <li  onClick={this.openModal.bind(this)} >{this.props.place.name}</li>
                     <Modal isOpen={this.state.isModalOpen} place={this.props.place} closeModal={this.openModal}/>
                 </div>
         )

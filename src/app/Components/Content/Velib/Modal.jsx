@@ -19,23 +19,27 @@ export default class Modal extends React.Component {
     render() {
         if(this.props.isOpen === true) {
             return (
-                <div>
-                    <div>
-                        <div>Adresse </div>
-                         <div>{this.state.adress}</div>
-                    </div>
-                    <div>
-                        <div>Place total </div>
-                         <div>{this.state.bikeStands}</div>
-                    </div>
+                <div className='modal'>
+                    <div className='description'>
+                        <div className='details'>
+                            <div>
+                                <div>Adresse </div>
+                                <div>{this.state.adress}</div>
+                            </div>
+                            <div>
+                                <div>Place total </div>
+                                <div>{this.state.bikeStands}</div>
+                            </div>
 
-                    <div>
-                        <div>Vélib disponible  </div>
-                         <div>{this.state.availableBikeStands}</div>
-                    </div>
-                    <div>
-                        <div>Place disponible  </div>
-                         <div>{this.state.available_bikes}</div>
+                            <div>
+                                <div>Vélib disponible  </div>
+                                <div>{this.state.availableBikeStands}</div>
+                            </div>
+                            <div>
+                                <div>Place disponible  </div>
+                                <div>{this.state.available_bikes}</div>
+                            </div>
+                        </div>
                     </div>
                     <Map lat={this.state.lat} lng={this.state.lng}/>
 
@@ -45,7 +49,7 @@ export default class Modal extends React.Component {
         }
         else {
             return (
-                <p>Cliquez pour en savoir plus</p>
+                       <div></div>
             )
         }
     }
