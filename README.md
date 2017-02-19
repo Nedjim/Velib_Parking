@@ -20,6 +20,6 @@ Aller à l'adresse: http://localhost:X/parking ou http://localhost:X/velib
 - Reactjs
 - React router
 - Webpack
-- Javascript
+- Javascript / ES6
 - Sass
 
