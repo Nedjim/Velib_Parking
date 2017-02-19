@@ -28,7 +28,6 @@ export default class Content extends React.Component {
     onSubmit(e){
         e.preventDefault();
         let result = this.refs.arrond.value.split('').splice(3,4).join('');
-         console.log(result);
         this.getParkingPlaces(result);
     }
     /*--------------------------------------------------- */
