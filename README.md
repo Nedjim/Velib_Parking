@@ -1,10 +1,10 @@
 # Parking gratuit de Paris et Velib d'Ile de France
 
-## 1 - Execution
+## 1 - Présentation
 
-    Cette application indique les parkings gratuits de Paris ainsi que les emplacements de velib d'Ile de France.
-    Ces informations ont été récupérés sur les API de JDecaux et de la Mairie de Paris, ce qui nous permet d'obtenir des
-    informations plus précises comme par exemple le nombre de places disponible (pour les velib) et leur localisation.
+Cette application indique les parkings gratuits de Paris ainsi que les emplacements de velib d'Ile de France.
+Ces informations ont été récupérés sur les API de JDecaux et de la Mairie de Paris, ce qui nous permet d'obtenir des
+informations plus précises comme par exemple le nombre de places disponible (pour les velib) et leur localisation.
 
 
 ## 2 - Execution
