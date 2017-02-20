@@ -32,11 +32,11 @@ export default class Modal extends React.Component {
                             </div>
 
                             <div>
-                                <div>Vélib disponible  </div>
+                                <div>Emplacements disponible  </div>
                                 <div>{this.state.availableBikeStands}</div>
                             </div>
                             <div>
-                                <div>Place disponible  </div>
+                                <div>Vélibs disponible  </div>
                                 <div>{this.state.available_bikes}</div>
                             </div>
                         </div>

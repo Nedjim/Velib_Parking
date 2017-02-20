@@ -54,6 +54,21 @@ export default class Content extends React.Component {
                         <button type='submit'>Chercher</button>
                     </form>
                 </div>
+                <div id='buttonIndication'>
+                    <h3>Présence de vélos</h3>
+                    <div>
+                        <div className="round nul"></div>
+                        <div>Nul</div>
+                    </div>
+                    <div>
+                        <div className="round medium"></div>
+                        <div>Moyenne</div>
+                    </div>
+                    <div>
+                        <div className="round old"></div>
+                        <div>Forte</div>
+                    </div>
+                </div>
                 <Velib places={this.state.places} status={this.state.status}/>
             </div>
         )

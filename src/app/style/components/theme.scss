@@ -1,5 +1,4 @@
 body {
-    // background-image: url(src/app/img/velib.jpg);
     background: $light;
     font-family: $muli;
     color: $greyDark;
@@ -54,5 +53,17 @@ body {
     div:last-child {
         font-size: 0.8rem;
         color: $yellow;
+    }
+}
+
+#buttonIndication {
+    .nul {
+        background: #424242;
+    }
+    .medium {
+        background: #CDDC39;
+    }
+    .old {
+        background: #4CAF50;
     }
 }

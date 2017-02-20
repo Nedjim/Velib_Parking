@@ -20,7 +20,7 @@ body {
         margin-top: 2rem;
         text-align: center;
         width: 80%;
-        height: 65vh;
+        height: 60vh;
         overflow: auto;
     }
     .resultNull {
@@ -32,14 +32,11 @@ body {
     }
     .list {
         width: 15rem;
-        height: 5vh;
+        padding-bottom: 0.5rem;
         padding-top: 1rem;
         margin-bottom: 0.5rem;
         margin-left: 1rem;
         display: inline-block;
-        li {
-            display: inline-block;
-        }
         .modal {
             position: absolute;
             top: 5.2rem;
@@ -96,4 +93,38 @@ button {
 button:hover,
 .list:hover {
     cursor: pointer;
+}
+
+#buttonIndication {
+    text-align: center;
+    margin-top: 1rem;
+    h3 {
+        font-weight: bold;
+    }
+}
+
+#buttonIndication>div {
+    display: inline-block;
+    margin-right: 1rem;
+    margin-top: 0.5rem;
+    .round {
+        text-align: center;
+        margin-right: 0.5rem;
+        margin-top: 0.5rem;
+    }
+    .round,
+    div {
+        display: inline-block;
+    }
+}
+
+.round {
+    width: 1rem;
+    height: 1rem;
+    @include radius(4rem);
+}
+
+.eval {
+    margin: 0 auto;
+    margin-top: 0.5rem;
 }
