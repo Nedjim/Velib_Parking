@@ -11,7 +11,7 @@ export default class Modal extends React.Component {
             lng: props.place.position.lng,
             availableBikeStands: props.place.available_bike_stands,
             available_bikes: props.place.available_bikes,
-            bikeStands: props.place.bike_stands, //Place total
+            bikeStands: props.place.bike_stands, 
             status: props.place.status
         }
     }
@@ -21,7 +21,7 @@ export default class Modal extends React.Component {
             return (
                 <div className='modal'>
                     <div className='description'>
-                        <div className='details'>
+                        <div className='details'>s
                             <div>
                                 <div>Adresse </div>
                                 <div>{this.state.adress}</div>
