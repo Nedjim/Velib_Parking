@@ -73,15 +73,16 @@ body {
     padding-top: 2rem;
     .title {
         h1 {
-            font-size: 2rem;
+            font-size: 3.5rem;
             font-weight: bold;
+            color: white;
         }
     }
     .boxs {
         .box{
-            background: rgba(230,81,0, 0.9);
+            background: rgba(0,0,0,0.5);
             color: white;
-            font-size: 1.3rem;
+            font-size: 1.5rem;
             &:hover{
                 background: #E53935;
             }

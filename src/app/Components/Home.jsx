@@ -13,7 +13,7 @@ export default class Home extends React.Component{
         return (
             <div id='homePage' style={Style}>
                 <div className='title'>
-                    <h1>ACCUEIL</h1> 
+                    <h1>Une envie de vous déplacer? </h1> 
                 </div>
                 <div className='boxs'>
                     <Link to='/velib'>
