@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "postinstall": "webpack -p --config webpack.prod.config.js",
-    "heroku-postbuild": "webpack -p --config ./webpack.prod.config.js --progress"
+    "postinstall": "webpack -p --config webpack.prod.config.js"
   },
   "repository": {
     "type": "git",
