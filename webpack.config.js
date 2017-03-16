@@ -32,7 +32,16 @@ var config = {
                 }
             }
         ]
-    }
+    },
+    devServer: {
+        contentBase: './dist',
+        hot: true
+    },
+    plugins: [
+        new webpack.optimize.OccurenceOrderPlugin(),
+        new webpack.HotModuleReplacementPlugin(),
+        new webpack.NoErrorsPlugin()
+  ]
 };
 
 module.exports = config;
