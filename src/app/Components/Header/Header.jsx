@@ -7,9 +7,9 @@ export default class Header extends React.Component  {
         return (
              <header>
                 <h1>{this.props.title}</h1>
-                <li><Link to='/'>Accueil</Link></li>
-                <li><Link to='/velib'>Velib d'Ile de France</Link></li>
-                <li><Link to='/parking'>Parkings gratuits Paris</Link></li>
+                <li><Link to='/' className='link'>Accueil</Link></li>
+                <li><Link to='/velib' className='link'>Velib d'Ile de France</Link></li>
+                <li><Link to='/parking' className='link'>Parkings gratuits Paris</Link></li>
             </header>
         )
     }

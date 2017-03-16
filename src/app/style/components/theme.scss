@@ -3,15 +3,21 @@ body {
     font-family: $muli;
     color: $greyDark;
     header {
-        background: $greyDark;
-        color: $light;
+        background: rgba(0,0,0,0.7);
+        color: white;
         h1 {
             font-size: 2rem;
             font-family: $orimo;
         }
+        li {
+            display: inline-block;
+            .link{
+                color: white;
+            }
+        }
     }
     .formulaire {
-        background: $yellow;
+        background: rgba(0,0,0,0.8);
         input,
         button {
             font-size: 0.9rem;
@@ -85,8 +91,20 @@ body {
             font-size: 1.5rem;
             &:hover{
                 background: #E53935;
+                cursor: pointer;
             }
         }
     }
     
+}
+
+/*Content*/
+
+.content {
+    height: 100vh;
+    background-repeat: none;
+    background-size: cover;
+}
+.content .velib  {
+    background-position: center;
 }

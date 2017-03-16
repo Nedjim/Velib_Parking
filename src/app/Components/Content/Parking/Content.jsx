@@ -4,6 +4,12 @@ import _                from 'lodash';
 import Parking          from './Parking.jsx';
 import Header           from './../../Header/Header.jsx';
 
+import Background       from '../../../img/red-car.jpg';
+
+var Style = {
+    backgroundImage: 'url('+Background+')'
+}
+
 export default class Content extends React.Component {
 
     constructor(){
@@ -43,7 +49,7 @@ export default class Content extends React.Component {
 
     render() {
             return (
-                <div>
+                <div className='content parking' style={Style}>
                     <Header title={'PARKINGS gratuit de Paris'}/>
                     <div className='formulaire'>
                         <form onSubmit={this.onSubmit.bind(this)}>

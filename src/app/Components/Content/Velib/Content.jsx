@@ -4,6 +4,13 @@ import _                from 'lodash';
 import Velib            from './Velib.jsx';
 import Header           from './../../Header/Header.jsx';
 
+import Background       from '../../../img/velib.jpg';
+
+
+var Style = {
+    backgroundImage: 'url('+Background+')'
+}
+
 export default class Content extends React.Component {
 
     constructor(){
@@ -43,9 +50,9 @@ export default class Content extends React.Component {
 
     render() {
         return (
-            <div>
-                <Header title={'VELIBS Ile de France'}/>
-                
+            <div className='content velib' style={Style}>
+                <Header title={'VELIBS dIle de France'}/>
+
                 <div className='formulaire'>
                     <form onSubmit={this.onSubmit.bind(this)}>
                         <input type='text'
