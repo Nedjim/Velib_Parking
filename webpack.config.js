@@ -23,6 +23,13 @@ var config = {
                 test: /\.s?css$/,
                 loaders: ['style-loader', 'css-loader', 'sass-loader'],
                 include: path.join(__dirname, 'src')
+            },
+            {
+                test: /\.(jpg|png|svg)$/,
+                loader: 'file-loader',
+                options: {
+                    name: 'images/[hash].[ext]',
+                }
             }
         ]
     }

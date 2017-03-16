@@ -128,3 +128,25 @@ button:hover,
     margin: 0 auto;
     margin-top: 0.5rem;
 }
+
+#homePage {
+    height: 100vh;
+    .title {
+        text-align: center;
+    }
+    .boxs {
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 10rem;
+        text-align: center;
+        .box {
+            display: inline-block;
+            width: 45%;
+            margin-right: 0.2rem;
+            margin-left: 0.2rem;
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+        }
+    }
+
+}

@@ -14,7 +14,7 @@ export default class Content extends React.Component {
         }
         this.getData();
     }
-    //appel du json
+
     getData(){
         let url = 'https://api.jcdecaux.com/vls/v1/stations?contract=Paris&available_bike_stands&apiKey=5a660b1f59583e8962c4ef34cedbc0bf283e7bd0'
         Request.get(url).then(data => {
@@ -23,13 +23,12 @@ export default class Content extends React.Component {
             });
         });
     }
-    //récupération du code postale en input
+
     onSubmit(e){
         e.preventDefault();
         this.getVelibPlaces(this.refs.zip.value);
     }
 
-    //filtrage par CP
     getVelibPlaces(zip){
         let places = []
 
@@ -46,6 +45,7 @@ export default class Content extends React.Component {
         return (
             <div>
                 <Header title={'VELIBS Ile de France'}/>
+                
                 <div className='formulaire'>
                     <form onSubmit={this.onSubmit.bind(this)}>
                         <input type='text'

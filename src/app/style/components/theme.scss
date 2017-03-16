@@ -67,3 +67,25 @@ body {
         background: #4CAF50;
     }
 }
+
+#homePage {
+    background-size: cover;
+    padding-top: 2rem;
+    .title {
+        h1 {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+    }
+    .boxs {
+        .box{
+            background: rgba(230,81,0, 0.9);
+            color: white;
+            font-size: 1.3rem;
+            &:hover{
+                background: #E53935;
+            }
+        }
+    }
+    
+}
