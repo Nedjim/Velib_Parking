@@ -23,7 +23,7 @@ var config = {
             {
                 test: /\.s?css$/,
                 loaders: ['style-loader', 'css-loader', 'sass-loader'],
-                include: path.join(__dirname, 'src')
+                include: path.join(__dirname, 'app/src')
             },
             {
                 test: /\.(jpg|png|svg)$/,
@@ -35,7 +35,7 @@ var config = {
         ]
     },
     devServer: {
-        contentBase: './dist',
+        contentBase: './app/dist',
         hot: true
     },
     plugins: [

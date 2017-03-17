@@ -7,8 +7,12 @@ import Header           from './../../Header/Header.jsx';
 import Background       from '../../../img/velib.jpg';
 
 
-var Style = {
+var Font = {
     backgroundImage: 'url('+Background+')'
+}
+
+var Form = {
+    background: 'rgba(0,0,0,0.7)'
 }
 
 export default class Content extends React.Component {
@@ -50,10 +54,10 @@ export default class Content extends React.Component {
 
     render() {
         return (
-            <div className='content velib' style={Style}>
-                <Header title={'VELIBS d\'Île de France'}/>
+            <div className='content velib' style={Font}>
+                <Header title={'VELIBS d\'Île de France'} page={"velib"}/>
 
-                <div className='formulaire'>
+                <div className='formulaire' style={Form}>
                     <form onSubmit={this.onSubmit.bind(this)}>
                         <input type='text'
                             required ref='zip'

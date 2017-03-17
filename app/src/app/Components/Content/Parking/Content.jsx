@@ -4,10 +4,14 @@ import _                from 'lodash';
 import Parking          from './Parking.jsx';
 import Header           from './../../Header/Header.jsx';
 
-import Background       from '../../../img/red-car.jpg';
+import Background       from '../../../img/paris2.jpg';
 
-var Style = {
+var Font = {
     backgroundImage: 'url('+Background+')'
+}
+
+var Form = {
+    background: 'rgba(0,0,0,0.6)'
 }
 
 export default class Content extends React.Component {
@@ -49,9 +53,9 @@ export default class Content extends React.Component {
 
     render() {
             return (
-                <div className='content parking' style={Style}>
-                    <Header title={'PARKINGS gratuits de Paris'}/>
-                    <div className='formulaire'>
+                <div className='content parking' style={Font}>
+                    <Header title={'PARKINGS gratuits de Paris'} page={"parking"}/>
+                    <div className='formulaire' style={Form}>
                         <form onSubmit={this.onSubmit.bind(this)}>
                             <input type='text'
                                 required ref='arrond'

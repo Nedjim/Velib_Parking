@@ -1,10 +1,10 @@
 body {
     background: $light;
+    background-size:cover;
     font-family: $muli;
     color: $greyDark;
     header {
-        background: rgba(0,0,0,0.7);
-        color: white;
+       color: white;
         h1 {
             font-size: 2.4rem;
             font-family: $orimo;
@@ -30,7 +30,6 @@ body {
         }
     }
     .formulaire {
-        background: rgba(0,0,0,0.8);
         input,
         button {
             font-size: 0.9rem;
@@ -96,7 +95,7 @@ body {
     padding-top: 2rem;
     .title {
         h1 {
-            font-size: 3.5rem;
+            font-size: 2rem;
             font-weight: bold;
             color: white;
         }
