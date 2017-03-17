@@ -13,7 +13,7 @@ Lien: [https://velibparking.herokuapp.com/](https://velibparking.herokuapp.com/)
 $ npm install
 $ npm start
 ```
-Aller à l'adresse: http://localhost:X/parking ou http://localhost:X/velib
+Aller à l'adresse: http://localhost:8080/
 
 ## 3 - Technologies
 - API: JDecaux , Mairie de Paris
