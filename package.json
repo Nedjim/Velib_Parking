@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "postinstall": "webpack -p --config webpack.prod.config.js"
+    "postinstall": "npm run bundle",
+    "bundle": "webpack"
   },
   "repository": {
     "type": "git",
